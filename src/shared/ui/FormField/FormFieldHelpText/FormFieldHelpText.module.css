@@ -1,0 +1,13 @@
+.root {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.root:not(.isInvalid) {
+  color: var(--text-dark);
+}
+
+.isInvalid {
+  color: var(--error-dark);
+}

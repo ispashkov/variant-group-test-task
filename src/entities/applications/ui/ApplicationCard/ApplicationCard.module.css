@@ -1,0 +1,11 @@
+.root {
+  --applicaton-card-actions-height: 24px;
+  --applicaton-card-gap: 8px;
+  --applicaton-card-line-height: 24px;
+  --applicaton-card-max-lines: 6;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--applicaton-card-gap);
+  position: relative;
+}

@@ -1,0 +1,8 @@
+.root {
+  --card-padding: 24px;
+  --card-background: var(--background-light);
+
+  border-radius: 12px;
+  padding: var(--card-padding);
+  background-color: var(--card-background);
+}

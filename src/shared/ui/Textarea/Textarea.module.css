@@ -1,0 +1,16 @@
+.root {
+  composes: root from "../InputText/InputText.module.css";
+  padding: 12px 14px;
+  height: auto;
+  resize: none;
+}
+
+.root:not([aria-invalid="true"]):focus {
+  border-color: var(--primary-base);
+  box-shadow: 0 0 0 4px var(--primary-light);
+  outline: none;
+}
+
+.root::placeholder {
+  color: var(--text-light);
+}

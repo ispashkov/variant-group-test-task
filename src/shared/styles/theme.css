@@ -1,0 +1,51 @@
+:root {
+  --font-family-heading: "FixelDisplay", system-ui, sans-serif;
+  --font-family-text: "FixelText", system-ui, sans-serif;
+
+  /* Primary Colors */
+  --primary-dark: #087443;
+  --primary-base: #73e2a3;
+  --primary-light: #d3f8df;
+  --primary-soft: #edfcf2;
+
+  /* Background Colors */
+  --background-primary: #ffffff;
+  --background-secondary: #eaecf0;
+  --background-light: #f2f4f7;
+  --background-dark: #d0d5dd;
+
+  /* Text Colors Base */
+  --text-white: #ffffff;
+  --text-black: #101828;
+
+  /* Text Colors */
+  --text-primary: var(--text-black);
+  --text-secondary: #667085;
+  --text-accent: #344054;
+  --text-light: #98a2b3;
+  --text-dark: #475467;
+  --text-reverse: var(--text-white);
+
+  /* Error Colors */
+  --error-light: #fee4e2;
+  --error-base: #fda29b;
+  --error-dark: #f04438;
+
+  --transition: .3s ease;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family-text);
+}
+
+*:focus-visible {
+  box-shadow: 0 0 0 4px var(--text-light);
+  outline: none;
+}
+
+[aria-invalid="true"] {
+  border-color: var(--error-base);
+  box-shadow: 0 0 0 4px var(--error-light);
+}

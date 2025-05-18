@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.label {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}

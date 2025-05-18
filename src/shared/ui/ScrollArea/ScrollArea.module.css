@@ -1,0 +1,37 @@
+.root {
+  --scrollbar-track-color: transparent;
+  --scrollbar-thumb-color: transparent;
+  --scrollbar-thumb-color-hover: transparent;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  position: relative;
+  height: 100%;
+}
+
+.root:hover {
+  --scrollbar-track-color: var(--background-secondary);
+  --scrollbar-thumb-color: var(--background-dark);
+  --scrollbar-thumb-color-hover: var(--text-dark);
+}
+
+.root::-webkit-scrollbar {
+  width: 4px;
+}
+
+.root::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background-color: var(--scrollbar-track-color);
+  transition: background-color var(--transition);
+}
+
+.root::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: var(--scrollbar-thumb-color);
+  transition: background-color var(--transition);
+}
+
+.root::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-color-hover);
+  transition: background-color var(--transition);
+}

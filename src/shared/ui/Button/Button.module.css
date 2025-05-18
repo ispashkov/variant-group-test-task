@@ -1,0 +1,115 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color, color, opacity, var(--transition);
+
+  background-color: var(--button-background-color-active);
+  border: 1px solid var(--button-border-color-active);
+  cursor: pointer;
+}
+
+.root,
+.root:visited {
+  color: var(--button-text-color-active);
+}
+
+.root:disabled {
+  border-color: var(--button-background-color-disabled);
+  background-color: var(--button-background-color-disabled);
+  color: var(--button-text-color-disabled);
+  cursor: not-allowed;
+}
+
+.root[aria-busy="true"] {
+  background-color: var(--button-background-color-active);
+  color: var(--button-text-color-active);
+  cursor: wait;
+}
+
+.root:hover:not(:disabled):not([aria-busy="true"]) {
+  opacity: 80%;
+}
+
+.big {
+  height: 60px;
+  padding: 18px 27px;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+
+  @media (min-width: 768px) {
+    height: 60px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.small {
+  height: 40px;
+  padding: 12px 17px;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+
+  @media (min-width: 768px) {
+    height: 44px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.primary {
+  --button-border-color-active: var(--primary-dark);
+  --button-background-color-active: var(--primary-dark);
+  --button-text-color-active: var(--text-white);
+
+  --button-border-color-disabled: var(--background-dark);
+  --button-background-color-disabled: var(--background-dark);
+  --button-text-color-disabled: var(--text-light);
+}
+
+.primary:focus-visible {
+  box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.outline {
+  --button-border-color-active: var(--background-dark);
+  --button-background-color-active: var(--background-primary);
+  --button-text-color-active: var(--text-accent);
+
+  --button-border-color-disabled: var(--background-dark);
+  --button-background-color-disabled: var(--background-primary);
+  --button-text-color-disabled: var(--text-light);
+}
+
+.icon {
+  --button-border-color-active: var(--background-dark);
+  --button-background-color-active: var(--background-primary);
+  --button-text-color-active: var(--text-accent);
+
+  --button-border-color-disabled: var(--background-dark);
+  --button-background-color-disabled: var(--background-primary);
+  --button-text-color-disabled: var(--text-light);
+
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+
+.ghost {
+  --button-border-color-active: transparent;
+  --button-background-color-active: transparent;
+  --button-text-color-active: var(--text-dark);
+
+  --button-border-color-disabled: transparent;
+  --button-background-color-disabled: transparent;
+  --button-text-color-disabled: var(--text-light);
+
+  padding: 0;
+  height: 24px;
+}

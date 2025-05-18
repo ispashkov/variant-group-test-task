@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 100dvh;
+  padding: 0 10px 16px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    padding: 16px 10px 120px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.outlet {
+  composes: column;
+  gap: 24px;
+}
+
+.content {
+  composes: column;
+  gap: 48px;
+}
