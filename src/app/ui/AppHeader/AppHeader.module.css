@@ -1,11 +1,16 @@
 .root {
   --app-header-padding-size: 16px;
+  --app-header-content-height: 48px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--app-header-padding-size) 0;
   background: var(--background-primary);
+  height: calc(
+    var(--app-header-content-height) +
+    (var(--app-header-padding-size) * 2)
+  );
 
   position: sticky;
   top: 0;

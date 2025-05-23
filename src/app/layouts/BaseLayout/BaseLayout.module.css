@@ -18,7 +18,6 @@
 
 .outlet {
   composes: column;
-  gap: 24px;
 }
 
 .content {

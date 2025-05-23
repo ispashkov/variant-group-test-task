@@ -1,6 +1,7 @@
 import { type VariantProps, cva } from 'class-variance-authority';
 import cn from 'clsx';
 
+import clsx from 'clsx';
 import styles from './Stepper.module.css';
 
 const stepperVariants = cva(styles.root, {
@@ -26,7 +27,10 @@ export const Stepper = ({
 
   return (
     <div
-      className={styles.container}
+      className={clsx(styles.container, {
+        [styles.isRound]: variant === 'round',
+        [styles.isRectangle]: variant === 'rectangle',
+      })}
       role="progressbar"
       aria-valuemin={0}
       aria-valuenow={currentStep}
