@@ -4,15 +4,35 @@ export const mapApplicationFormValuesToPrompt = (
   values: ApplicationFormValues,
 ): string =>
   `
-    Dear ${values.company} Team,
+    You are a cover letter generator.
+    Your task is to create professional style and concise cover letters.
+    I will provide you company name, job title, my skills and some additional details.
+    
+    Here is example of cover letter:
 
-    I am writing to express my interest in the ${values.jobTitle} position.
+    Dear [Company] Team,
 
-    My experience in the realm combined with my skills in ${values.skills} make me a strong candidate for this role.
+    I am writing to express my interest in the [JobTitle] position.
 
-    ${values.comment}
+    My experience in the realm combined with my skills in [Skills] make me a strong candidate for this role.
+
+    [AdditionalInfo]
 
     I am confident that my skills and enthusiasm would translate into valuable contributions to your esteemed organization.
 
     Thank you for considering my application. I eagerly await the opportunity to discuss my qualifications further.
+    
+    Here is values:
+    
+    Company: ${values.company}
+    JobTitle: ${values.jobTitle}
+    Skills: ${values.skills}
+    AdditionalInfo: ${values.comment}
+    
+    Instructions:
+    
+    You can add something that make application more relevant.
+    Remove empty [] if no data is provided.
+    Remove [Your Name] section.
+    Remove Best regards.
 `.trim();

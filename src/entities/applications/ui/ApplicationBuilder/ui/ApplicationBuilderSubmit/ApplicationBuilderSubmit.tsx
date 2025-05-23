@@ -15,13 +15,13 @@ export const ApplicationBuilderSubmit: FC<ApplicationBuilderSubmitProps> = ({
   isDisabled,
 }) => {
   const { formState } = useApplicationFormContext();
-  const { isSubmitted } = formState;
+  const { isSubmitted, isSubmitting } = formState;
 
   const isTryAgain = isSubmitted && !isLoading;
 
   return (
     <Button
-      type="submit"
+      type={isSubmitting ? 'button' : 'submit'}
       variant={isTryAgain ? 'outline' : 'primary'}
       form={form}
       loading={isLoading}

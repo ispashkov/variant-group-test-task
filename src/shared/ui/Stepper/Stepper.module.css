@@ -22,7 +22,14 @@
 
 .container {
   display: flex;
-  gap: 4px;
   align-items: center;
   transition: opacity var(--transition);
+}
+
+.container.isRectangle {
+  gap: 8px;
+}
+
+.container.isRound {
+  gap: 4px;
 }

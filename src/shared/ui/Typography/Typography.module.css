@@ -1,8 +1,13 @@
 .title {
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 32px;
+  line-height: 40px;
   font-weight: 600;
-  letter-spacing: -0.85px;
+  letter-spacing: -1px;
+
+  @media (min-width: 540px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
 
   @media (min-width: 768px) {
     font-size: 48px;
@@ -14,6 +19,7 @@
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
+  letter-spacing: -0.75px;
 
   @media (min-width: 768px) {
     font-size: 36px;

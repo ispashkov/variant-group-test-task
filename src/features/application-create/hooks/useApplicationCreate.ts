@@ -38,6 +38,7 @@ export const useApplicationCreate = (): UseApplicationCreateStateReturn => {
     try {
       setState((prevState) => ({
         ...prevState,
+        error: null,
         isLoading: true,
       }));
 
